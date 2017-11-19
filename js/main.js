@@ -31,7 +31,7 @@ function selected_img() {
         $($items[img_number]).addClass("active");
     }
     img_number++;
-    timer = setTimeout(selected_img, 3000);
+    timer = setTimeout(selected_img, 7000);
 }
 
 //manual_change - change img manually by click
@@ -48,4 +48,27 @@ document.addEventListener("DOMContentLoaded", function () {
     create_dots();
     selected_img();
     manual_change();
+});
+
+
+//menu toggle
+var hide_menu = function () {
+    document.querySelector(".menu_items").style.top = "-360px";
+};
+function show_menu(event) {
+    var menu_position = document.querySelector(".menu_items");
+
+    event.stopPropagation();
+    if(menu_position.style.top === "-360px" || menu_position.style.top === "") {
+        document.addEventListener('touchend', hide_menu, false);
+        document.addEventListener('click', hide_menu, false);
+        menu_position.style.top = "195px";
+    } else {
+        document.addEventListener('touchend', hide_menu, false);
+        document.addEventListener('click', hide_menu, false);
+        menu_position.style.top = "-360px";
+    }
+}
+document.querySelector(".nav_menu_button").addEventListener("click", function (event) {
+    show_menu(event);
 });

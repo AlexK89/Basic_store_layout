@@ -17,6 +17,7 @@ body {
 }
 
 .page_header {
+    position: relative;
     height: 195px;
 }
 
@@ -24,6 +25,7 @@ body {
     height: 135px;
     padding: 30px 0;
     border-bottom: #eeecea solid 1px;
+    background: #ffffff;
 }
 
 .page_header_logo_section img {
@@ -32,7 +34,27 @@ body {
     height: 75px;
 }
 
-.page_header_header_navigation ul {
+.nav_menu {
+    display: none;
+    position: absolute;
+    top: 135px;
+    width: 100%;
+    height: 60px;
+    z-index: 20;
+    background-color: #ffffff;
+}
+.nav_menu_button {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 30px;
+}
+
+.nav_menu_button img {
+    width: 30px;
+}
+
+.menu_items {
     display: flex;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -43,7 +65,7 @@ body {
     -ms-flex-pack: center;
 }
 
-.page_header_header_navigation li {
+.page_header_navigation li {
     display: inline-block;
     font-family: "Futura-Book";
     line-height: 60px;
@@ -53,15 +75,22 @@ body {
     transition: .3s;
 }
 
-.page_header_header_navigation a {
+.page_header_navigation li a {
     display: block;
     height: 100%;
     width: 100%;
     text-decoration: none;
     color: #333333;
+    transition: .3s;
+    padding: 0 20px;
 }
 
-.page_header_header_navigation img {
+.menu_item a:hover {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.page_header_navigation img {
     vertical-align: middle;
 }
 
@@ -78,11 +107,12 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: .3s;
+    transition: 1s;
 }
 
 .active {
     opacity: 1;
+    z-index: 10;
 }
 
 .main_img_carousel_item img {
@@ -439,6 +469,41 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+    .page_header_logo_section {
+        position: absolute;
+        width: 100%;
+        z-index: 20;
+    }
+
+    .page_header_navigation {
+        position: relative;
+        width: 100%;
+    }
+    .nav_menu {
+        display: block;
+    }
+    .nav_menu_button {
+        z-index: 20;
+    }
+
+    .menu_items {
+        display: block;
+        position: absolute;
+        z-index: 15;
+        top: -360px;
+        width: 100%;
+        transition: .5s;
+    }
+
+    .page_header_navigation li:first-child {
+        display: none;
+    }
+
+    .page_header_navigation li {
+        display: block;
+        background: #ffffff;
+    }
+
     .main_content_quote {
         width: 60%;
     }
