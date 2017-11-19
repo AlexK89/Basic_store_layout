@@ -427,7 +427,6 @@ body {
     .main_content_cashmere div {
         width: 50%;
         left: 25%;
-        top: 62.5%;
     }
 
     .main_content_sweaters {
@@ -446,5 +445,10 @@ body {
 
     .main_content_sale {
         width: 40%;
+    }
+
+    .main_content_cashmere div {
+        width: 60%;
+        left: 20%;
     }
 }
