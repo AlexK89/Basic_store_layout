@@ -319,8 +319,8 @@ body {
 
 .main_content_cashmere div {
     position: absolute;
-    width: 290px;
-    left: 32%;
+    width: 40%;
+    left: 30%;
     top: 62.5%;
 }
 
@@ -422,6 +422,12 @@ body {
     .main_content_shop_now div {
         top: 62.5%;
         margin-top: 0;
+    }
+
+    .main_content_cashmere div {
+        width: 50%;
+        left: 25%;
+        top: 62.5%;
     }
 
     .main_content_sweaters {
