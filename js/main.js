@@ -19,6 +19,7 @@ function active_dot() {
     $('.dots_navigation').eq(img_number).addClass("active");
 }
 
+//selected_img - shows selected img and relative dot
 function selected_img() {
     clearTimeout(timer);
     if ($items[img_number]) {
@@ -31,9 +32,9 @@ function selected_img() {
     }
     img_number++;
     timer = setTimeout(selected_img, 3000);
-
 }
 
+//manual_change - change img manually by click
 function manual_change() {
     document.querySelectorAll(".dots_navigation").forEach(function (value) {
         value.addEventListener("click", function () {
