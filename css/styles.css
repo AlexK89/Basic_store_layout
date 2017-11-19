@@ -1,0 +1,443 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.container {
+    width: 72%;
+    margin: 0 auto;
+}
+
+.page_header {
+    height: 195px;
+}
+
+.page_header_logo_section {
+    height: 135px;
+    padding: 30px 0;
+    border-bottom: #eeecea solid 1px;
+}
+
+.page_header_logo_section img {
+    display: block;
+    margin: auto;
+    height: 75px;
+}
+
+.page_header_header_navigation ul {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: center;
+}
+
+.page_header_header_navigation li {
+    display: inline-block;
+    font-family: "Futura-Book";
+    line-height: 60px;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.page_header_header_navigation a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: #333333;
+}
+
+.page_header_header_navigation img {
+    vertical-align: middle;
+}
+
+/*Main image section / Carousel*/
+.main_img {
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+    color: #333333;
+}
+
+.main_img_carousel_item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .3s;
+}
+
+.active {
+    opacity: 1;
+}
+
+.main_img_carousel_item img {
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    right: 0;
+}
+
+.main_img_carousel_item_content {
+    padding-top: 210px;
+}
+
+.main_img_carousel_item_content h1 {
+    text-transform: uppercase;
+    font-family: "Futura (Light)";
+    font-size: 6rem;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+.carousel_item_text {
+    width: 560px;
+    margin-top: 10px;
+    font-family: "ITC New Baskerville Std";
+    font-style: italic;
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+}
+
+.main_img_carousel_item_content a {
+    display: inline-block;
+    width: 184px;
+    height: 36px;
+    background-color: #333333;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Futura-Book";
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 40px;
+    transition: .3s;
+
+}
+
+.main_img_carousel_item_content a:hover {
+    background-color: #575757;
+}
+
+.dots {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 10px;
+    width: 60%;
+    margin-left: -30%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    cursor: default;
+}
+
+.dots li {
+    display: inline-block;
+    font-size: 7em;
+    color: #ffffff;
+}
+
+.dots .active {
+    color: #333333;
+}
+
+/*Main content section*/
+.main_content {
+    overflow: auto;
+}
+
+.main_content > div {
+    overflow: hidden;
+}
+
+.main_content_quote {
+    position: relative;
+    width: 50%;
+    height: 396px;
+    background-color: #333333;
+    float: left;
+}
+
+.main_content_quote .container {
+    position: absolute;
+    top: 50%;
+    left: 14%;
+    margin-top: -100px;
+}
+
+.main_content_quote p {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: #ffffff;
+}
+
+.quote {
+    font-family: "Futura-Book";
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.author {
+    font-family: "ITC New Baskerville Std";
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
+.main_content_sale {
+    width: 25%;
+    height: 396px;
+    float: left;
+}
+
+.main_content_sale_circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    border-radius: 50%;
+    background-color: #e76378;
+    color: #ffffff;
+}
+
+.main_content_sale_circle div {
+    position: absolute;
+    top: 50%;
+    left: 14%;
+    margin-top: -78px;
+}
+
+.main_content_sale_circle h4,
+.main_content_shop_now h4,
+.main_content_cashmere h4 {
+    margin: 0;
+    font-family: "Futura (Light)";
+    font-size: 5rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.main_content_sale_circle p,
+.main_content_shop_now p,
+.main_content_cashmere p {
+    margin: 5px;
+    font-family: "ITC New Baskerville Std";
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.main_content_shop_now img,
+.main_content_cashmere img,
+.main_content_sweaters img {
+    min-width: 100%;
+}
+
+.main_content_shop_now {
+    position: relative;
+    width: 25%;
+    height: 1188px;
+    float: right;
+    color: #ffffff;
+}
+
+.main_content_shop_now div {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    margin-top: -132px;
+}
+
+.main_content_shop_now img,
+.main_content_cashmere img {
+    position: absolute;
+    min-height: 100%;
+    z-index: -10;
+}
+
+.main_content_shop_now hr,
+.main_content_cashmere hr {
+    display: block;
+    width: 30%;
+    margin: 20px auto;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+}
+
+.main_content_shop_now p,
+.main_content_cashmere p {
+    font-weight: lighter;
+}
+
+.main_content_shop_now a,
+.main_content_cashmere a {
+    display: inline-block;
+    width: 170px;
+    height: 36px;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Futura (Light)";
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 40px;
+    transition: .3s;
+}
+
+.main_content_shop_now a:hover {
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.main_content_cashmere {
+    position: relative;
+    width: 50%;
+    height: 792px;
+    float: left;
+    color: #333333;
+}
+
+.main_content_cashmere div {
+    position: absolute;
+    width: 290px;
+    left: 32%;
+    top: 62.5%;
+}
+
+.main_content_cashmere p {
+    font-size: 1.8rem;
+}
+
+.main_content_cashmere hr {
+    border-bottom: 1px solid #333333;
+}
+
+.main_content_sweaters,
+.main_content_newsletter {
+    width: 25%;
+    height: 396px;
+    float: left;
+}
+
+.main_content_cashmere a {
+    display: inline-block;
+    width: 170px;
+    height: 36px;
+    font-size: 1.8rem;
+    line-height: 40px;
+    color: #333333;
+    transition: .3s;
+}
+
+.main_content_cashmere a:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.main_content_newsletter {
+    position: relative;
+    overflow: hidden;
+    background-color: #d3cec7;
+    text-align: center;
+    color: #333333;
+}
+
+.main_content_newsletter div {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    margin-top: -135px;
+}
+
+.main_content_newsletter h4 {
+    font-family: "Futura-Book";
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+
+.main_content_newsletter p {
+    font-family: "ITC New Baskerville Std";
+    font-style: italic;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+}
+
+.main_content_newsletter a {
+    display: inline-block;
+    width: 170px;
+    height: 36px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Futura-Book";
+    font-size: 1.4rem;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: 40px;
+    background-color: #333333;
+    transition: .3s;
+}
+
+.main_content_newsletter a:hover {
+    background-color: #575757;
+}
+
+@media screen and (max-width: 1600px) {
+    .main_content_quote {
+        width: 70%;
+    }
+
+    .main_content_sale {
+        width: 30%;
+    }
+
+    .main_content_shop_now {
+        height: 792px;
+        float: left;
+        width: 50%;
+    }
+    .main_content_shop_now div {
+        top: 62.5%;
+        margin-top: 0;
+    }
+
+    .main_content_sweaters {
+        display: none;
+    }
+
+    .main_content_newsletter {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main_content_quote {
+        width: 60%;
+    }
+
+    .main_content_sale {
+        width: 40%;
+    }
+}
