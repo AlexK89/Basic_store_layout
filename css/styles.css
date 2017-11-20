@@ -502,6 +502,7 @@ body {
     .page_header_navigation li {
         display: block;
         background: #ffffff;
+        margin-top: -1px; /*fixing rendering issues in chrome*/
     }
 
     .main_content_quote {
